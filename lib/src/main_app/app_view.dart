@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class AppView extends StatelessWidget {
   const AppView({Key? key}) : super(key: key);
@@ -8,7 +9,7 @@ class AppView extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(),
-        body: Text("Hello"),
+        body: Lottie.asset('money_loading.json'),
       ),
     );
   }
