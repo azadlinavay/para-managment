@@ -8,8 +8,7 @@ class AppView extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(),
-        body: Lottie.asset('assets/money.json'),
+        body: Center(child: Lottie.asset('assets/money.json')),
       ),
     );
   }
