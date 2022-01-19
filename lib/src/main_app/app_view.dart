@@ -9,7 +9,7 @@ class AppView extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(),
-        body: Lottie.asset('money_loading.json'),
+        body: Lottie.asset('assets/money.json'),
       ),
     );
   }
