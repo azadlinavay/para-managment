@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:lottie/lottie.dart';
 import '../welcome_screens/welcome_screens01.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -21,7 +21,7 @@ class _SplashScreenViewState extends State<SplashScreenView> {
     Timer(
         const Duration(seconds: 6),
         () => Navigator.pushReplacement(context,
-            MaterialPageRoute(builder: (context) => const SplashScreenView())));
+            MaterialPageRoute(builder: (context) => const WelcomeScreenView01())));
   }
 
   @override
