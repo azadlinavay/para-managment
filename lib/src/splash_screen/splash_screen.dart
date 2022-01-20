@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import '../welcome_screens/welcome_screens01.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -18,7 +19,7 @@ class _SplashScreenViewState extends State<SplashScreenView> {
   void initState() {
     super.initState();
     Timer(
-        const Duration(seconds: 10),
+        const Duration(seconds: 6),
         () => Navigator.pushReplacement(context,
             MaterialPageRoute(builder: (context) => const SplashScreenView())));
   }
@@ -35,22 +36,27 @@ class _SplashScreenViewState extends State<SplashScreenView> {
                       const EdgeInsets.only(top: 80.0, left: 20.0, right: 20.0),
                   child: Lottie.asset('assets/money.json')),
             ),
-            TextLiquidFill(
-              boxHeight: 50,
-              boxWidth: 300,
-              text: 'App Name',
-              waveDuration: Duration(seconds: 3),
-              waveColor: Colors.blue,
-              textStyle: TextStyle(
-                fontSize: 30.0,
-                fontWeight: FontWeight.bold,
+            SizedBox(
+              width: 250.0,
+              child: DefaultTextStyle(
+                style: const TextStyle(
+                    color: Color.fromARGB(255, 82, 81, 81),
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold),
+                child: AnimatedTextKit(
+                  animatedTexts: [
+                    TypewriterAnimatedText('App Name',
+                        textAlign: TextAlign.center),
+                  ],
+                  isRepeatingAnimation: false,
+                ),
               ),
             ),
             Container(
               margin:
                   const EdgeInsets.only(top: 350.0, left: 20.0, right: 20.0),
               child: const Text(
-                'From',
+                'from',
                 style: TextStyle(fontSize: 15),
               ),
             ),
