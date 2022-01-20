@@ -13,10 +13,8 @@ class AppView extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          primaryColor: Color.fromARGB(255, 255, 253, 253),
-          appBarTheme: const AppBarTheme(
-            backgroundColor: Colors.transparent,
-          )),
+        primaryColor: Color.fromARGB(255, 255, 253, 253),
+      ),
       initialRoute: '/',
       routes: {
         '/': (context) => SplashScreenView(),
@@ -24,6 +22,7 @@ class AppView extends StatelessWidget {
         '/wellcome01': (context) => WelcomeScreenView01(),
         '/wellcome02': (context) => WelcomeScreenView02(),
         '/wellcome03': (context) => WelcomeScreenView03(),
+        // '/splashScreen': (context) => SplashScreenView(),
         //this was the Auth handler
         //this was the Auth handler
         //this was the Auth handler
