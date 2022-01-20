@@ -14,7 +14,7 @@ class AppView extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
           primaryColor: Color.fromARGB(255, 255, 253, 253),
-          appBarTheme: AppBarTheme(
+          appBarTheme: const AppBarTheme(
             backgroundColor: Colors.transparent,
           )),
       initialRoute: '/',

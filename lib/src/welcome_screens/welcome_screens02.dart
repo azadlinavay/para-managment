@@ -66,6 +66,7 @@ class WelcomeScreenView02 extends StatelessWidget {
           Container(
               margin: const EdgeInsets.only(top: 30),
               height: 320,
+              width: 290,
               child: Lottie.asset('assets/wellcome02.json')),
           Container(
             margin: EdgeInsets.only(top: 80),
