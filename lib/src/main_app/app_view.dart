@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
+
+import '../splash_screen/splash_screen.dart';
 
 class AppView extends StatelessWidget {
   const AppView({Key? key}) : super(key: key);
@@ -7,9 +8,15 @@ class AppView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body: Center(child: Lottie.asset('assets/money.json')),
-      ),
+      theme: ThemeData(
+          primaryColor: Color.fromARGB(255, 255, 253, 253),
+          appBarTheme: AppBarTheme(
+            backgroundColor: Colors.transparent,
+          )),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => SplashScreenView(), //this was the Auth handler
+      },
     );
   }
 }
