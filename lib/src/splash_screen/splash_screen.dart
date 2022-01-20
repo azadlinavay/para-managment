@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import '../welcome_screens/welcome_screens01.dart';
+import 'package:animated_text_kit/animated_text_kit.dart';
 
 class SplashScreenView extends StatefulWidget {
   const SplashScreenView({Key? key}) : super(key: key);
@@ -34,9 +35,16 @@ class _SplashScreenViewState extends State<SplashScreenView> {
                       const EdgeInsets.only(top: 80.0, left: 20.0, right: 20.0),
                   child: Lottie.asset('assets/money.json')),
             ),
-            const Text(
-              'name of app',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+            TextLiquidFill(
+              boxHeight: 50,
+              boxWidth: 300,
+              text: 'App Name',
+              waveDuration: Duration(seconds: 3),
+              waveColor: Colors.blue,
+              textStyle: TextStyle(
+                fontSize: 30.0,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             Container(
               margin:
