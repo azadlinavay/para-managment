@@ -59,6 +59,7 @@ class WelcomeScreenView02 extends StatelessWidget {
               margin: const EdgeInsets.only(top: 50, left: 80, right: 80),
               child: const Text(
                 'Manage your money and invest with just one tap!',
+                textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 18),
               ),
             ),

@@ -14,6 +14,7 @@ class WelcomeScreenView01 extends StatelessWidget {
             child: Container(
               margin: const EdgeInsets.only(top: 100),
               child: const Text('Save money',
+                  textAlign: TextAlign.center,
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
             ),
           ),
@@ -59,6 +60,7 @@ class WelcomeScreenView01 extends StatelessWidget {
               margin: const EdgeInsets.only(top: 50, left: 80, right: 80),
               child: const Text(
                 'Have all your finances in one place!',
+                textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 18),
               ),
             ),

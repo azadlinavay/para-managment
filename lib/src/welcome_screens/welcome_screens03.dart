@@ -58,6 +58,7 @@ class WelcomeScreenView03 extends StatelessWidget {
               margin: const EdgeInsets.only(top: 50, left: 80, right: 80),
               child: const Text(
                 'Reach your financial goal within your first year!',
+                textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 18),
               ),
             ),
