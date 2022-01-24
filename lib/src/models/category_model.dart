@@ -5,6 +5,9 @@ class ParaCategory {
   String? uid;
   String? name; //Car
   String? emoji; //🚘
+  String? type; // spend|income|both
+
+
   ParaCategory({
     this.color,
     this.uid,

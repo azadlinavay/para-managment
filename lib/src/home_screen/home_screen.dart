@@ -27,7 +27,19 @@ class _HomeScreenViewState extends State<HomeScreenView> {
       body: SafeArea(
         child: Center(
             child: Container(
-          child: const Text("Main View"),
+          child: Container(
+            decoration: BoxDecoration(
+              color: Colors.red[200],
+              borderRadius: BorderRadius.all(Radius.circular(20)),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                "❤️",
+                style: TextStyle(fontSize: 40),
+              ),
+            ),
+          ),
         )),
       ),
     );
