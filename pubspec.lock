@@ -148,6 +148,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.2"
+  ffr_hex_color:
+    dependency: "direct main"
+    description:
+      name: ffr_hex_color
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.2"
   file:
     dependency: transitive
     description:
@@ -223,6 +230,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_iconpicker:
+    dependency: "direct main"
+    description:
+      name: flutter_iconpicker
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.1.2"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -247,6 +261,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.1.1+2"
+  font_awesome_flutter:
+    dependency: transitive
+    description:
+      name: font_awesome_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "9.2.0"
   http:
     dependency: "direct main"
     description:
@@ -269,7 +290,7 @@ packages:
     source: hosted
     version: "2.1.1"
   intl:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: intl
       url: "https://pub.dartlang.org"

@@ -1,8 +1,21 @@
 import 'dart:convert';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:para/src/models/category_model.dart';
+import 'package:para/src/temp/damy_data.dart';
 
 class Para {
+  ParaCategory get categpry {
+    debugPrint(this.uid);
+
+    return category.firstWhere((element) => element.uid == this.categoryID);
+  }
+
+  double get usd {
+    return (amountIQD ?? 1) / (amountOneUSDToIQD ?? 1);
+  }
+
   String? uid;
   Timestamp? createdAt;
   Timestamp? updatedAt;
@@ -11,7 +24,7 @@ class Para {
   double? amountIQD; // 10,000
   double? amountUSD; //6.75675
   double? amountOneUSDToIQD; //1480
-  String? amountType; // spent || income
+  String? amountType; // spend || income
 
   //category
   String? walletId;
@@ -29,7 +42,6 @@ class Para {
     this.categoryID,
     this.description,
   });
-  
 
   Para copyWith({
     String? uid,
@@ -99,31 +111,31 @@ class Para {
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;
-  
+
     return other is Para &&
-      other.uid == uid &&
-      other.createdAt == createdAt &&
-      other.updatedAt == updatedAt &&
-      other.amountIQD == amountIQD &&
-      other.amountUSD == amountUSD &&
-      other.amountOneUSDToIQD == amountOneUSDToIQD &&
-      other.amountType == amountType &&
-      other.walletId == walletId &&
-      other.categoryID == categoryID &&
-      other.description == description;
+        other.uid == uid &&
+        other.createdAt == createdAt &&
+        other.updatedAt == updatedAt &&
+        other.amountIQD == amountIQD &&
+        other.amountUSD == amountUSD &&
+        other.amountOneUSDToIQD == amountOneUSDToIQD &&
+        other.amountType == amountType &&
+        other.walletId == walletId &&
+        other.categoryID == categoryID &&
+        other.description == description;
   }
 
   @override
   int get hashCode {
     return uid.hashCode ^
-      createdAt.hashCode ^
-      updatedAt.hashCode ^
-      amountIQD.hashCode ^
-      amountUSD.hashCode ^
-      amountOneUSDToIQD.hashCode ^
-      amountType.hashCode ^
-      walletId.hashCode ^
-      categoryID.hashCode ^
-      description.hashCode;
+        createdAt.hashCode ^
+        updatedAt.hashCode ^
+        amountIQD.hashCode ^
+        amountUSD.hashCode ^
+        amountOneUSDToIQD.hashCode ^
+        amountType.hashCode ^
+        walletId.hashCode ^
+        categoryID.hashCode ^
+        description.hashCode;
   }
 }
