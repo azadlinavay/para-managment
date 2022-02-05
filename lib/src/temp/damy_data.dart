@@ -19,7 +19,9 @@ User user = User(
 List<Wallet> wallets = [
   Wallet(uid: "1", name: "Main wallet", description: ""),
 ];
-
+List<ParaCategory> category = [];
+List<Para> para = [];
+/*
 // 10 items
 List<ParaCategory> category = [
   ParaCategory(uid: "1", emoji: "🚗", name: "Car", color: "#d6a622"),
@@ -608,7 +610,7 @@ List<Para> para = [
       categoryID: "1", //1 ... 10
       description: ""),
 ];
-
+*/
 saveDataToFierbase() async {
   var firebase = FirebaseFirestore.instance;
 
@@ -642,7 +644,7 @@ saveDataToFierbase() async {
   });
 }
 
- Map<DateTime, List<Para>> createMap() {
+Map<DateTime, List<Para>> createMap() {
   Map<DateTime, List<Para>> paraArr = new HashMap();
 
   paraArr[DateTime(2022, 1, 1)] = [
