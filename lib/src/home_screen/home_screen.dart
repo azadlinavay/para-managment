@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:para/src/add_screen/add_screen.dart';
 import 'package:para/src/models/category_model.dart';
 import 'package:para/src/models/para_model.dart';
 import 'package:para/src/temp/damy_data.dart';
@@ -29,12 +30,19 @@ class _HomeScreenViewState extends State<HomeScreenView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+          onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Addscreen()),
+              )),
       // appBar: AppBar(
       //   title: const Text("Para Managment"),
       // ),
       body: SafeArea(
         child: Column(
           children: [
+            ElevatedButton(
+                onPressed: () => setState(() {}), child: Text("refresh")),
             topBarBalance(),
             Expanded(
               child: ListView.builder(
@@ -155,9 +163,10 @@ class _HomeScreenViewState extends State<HomeScreenView> {
       ),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Text(
-          category.emoji ?? "🤑",
-          style: TextStyle(fontSize: 40),
+        child: Icon(
+          IconData(int.parse(category.emoji.toString()),
+              fontFamily: 'MaterialIcons'),
+          color: Colors.white,size: 40,
         ),
       ),
     );
